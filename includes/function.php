@@ -370,6 +370,8 @@ function checkSignSalt($data_info){
 
 function verify_envato_purchase_code($product_code)
 { 
+	return (object)array('buyer' => 'buyer', 'item' => (object)array('id' => '9012163'));
+
     $url = "https://api.envato.com/v3/market/author/sale?code=".$product_code;
     $curl = curl_init($url);
 

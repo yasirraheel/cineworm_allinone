@@ -37,6 +37,7 @@ if (isset($_POST['android_verify_btn'])) {
     $f = @fopen($config_file_path, "w+");
 
     if (@fwrite($f, $config_file) > 0) {
+      @fclose($f);
     }
 
     $admin_url = getBaseUrl();
