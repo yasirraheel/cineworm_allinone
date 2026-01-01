@@ -16,7 +16,7 @@ if (isset($_POST['android_verify_btn'])) {
 
   $envato_buyer = verify_envato_purchase_code(trim($_POST['envato_purchase_code']));
 
-  if ($_POST['envato_buyer_name'] != '' and $envato_buyer->buyer == $_POST['envato_buyer_name'] and ($envato_buyer->item->id == '9012163') OR ($envato_buyer->item->id == '20239372')) {
+  if ($_POST['envato_buyer_name'] != '' and $envato_buyer->buyer == $_POST['envato_buyer_name'] and (($envato_buyer->item->id == '9012163') OR ($envato_buyer->item->id == '20239372'))) {
 
     $data = array(
       'envato_buyer_name' => trim($_POST['envato_buyer_name']),
