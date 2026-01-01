@@ -370,8 +370,6 @@ function checkSignSalt($data_info){
 
 function verify_envato_purchase_code($product_code)
 { 
-	return array('buyer' => 'buyer', 'item' => array('id' => '9012163'));
-
     $url = "https://api.envato.com/v3/market/author/sale?code=".$product_code;
     $curl = curl_init($url);
 
@@ -393,8 +391,6 @@ function verify_envato_purchase_code($product_code)
 
 function verify_data_on_server($product_id,$buyer_name,$purchase_code,$purchased_status,$admin_url,$package_name,$envato_buyer_email,$ios_bundle_identifier)
 {  
-	echo "done";
-
     $ch = curl_init();
     curl_setopt($ch, CURLOPT_URL,"http://www.secureapp.viaviweb.in/verified_user.php");
     curl_setopt($ch, CURLOPT_POST, true);
